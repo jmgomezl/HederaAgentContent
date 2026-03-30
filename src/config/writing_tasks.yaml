@@ -1,0 +1,39 @@
+twitter_writing_task:
+  description: >
+    Using the content plan, write a tweet thread (2-5 tweets) for X/Twitter.
+    IMPORTANT: Write ALL content in {language_name}.
+    Each tweet must be under 280 characters.
+    Include relevant hashtags (#Hedera, #HBAR, #Web3).
+    First tweet should hook the reader. Last tweet should have a call to action.
+    Do NOT invent facts not in the content plan.
+  expected_output: >
+    A JSON object with "tweets" (list of strings in {language_name}),
+    "hashtags" (list of strings), and "language" set to "{language}".
+  agent: content_writer
+
+medium_writing_task:
+  description: >
+    Using the content plan, write a complete Medium article in Markdown.
+    IMPORTANT: Write ALL content in {language_name}.
+    Title: 50-70 characters, compelling, in {language_name}.
+    Structure: TL;DR bullets, 3-4 H2 sections, conclusion with CTA.
+    Length: 800-1500 words.
+    Do NOT invent facts, metrics, or links not in the content plan.
+  expected_output: >
+    A JSON object with "title", "subtitle", "body" (Markdown string),
+    "tags" (list of up to 5 strings), and "language" set to "{language}".
+    All text content must be in {language_name}.
+  agent: content_writer
+
+discord_writing_task:
+  description: >
+    Using the content plan, write a Discord announcement message.
+    IMPORTANT: Write ALL content in {language_name}.
+    Title: clear and attention-grabbing, in {language_name}.
+    Description: 2-4 paragraphs using Discord markdown, under 4000 chars.
+    End with an engagement prompt in {language_name}.
+    Do NOT invent facts not in the content plan.
+  expected_output: >
+    A JSON object with "title", "description", and optional "url".
+    All text content must be in {language_name}.
+  agent: content_writer

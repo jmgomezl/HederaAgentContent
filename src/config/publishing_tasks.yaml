@@ -1,0 +1,29 @@
+publish_twitter_task:
+  description: >
+    Take the finalized Twitter content and post it as a tweet thread
+    using the Post Tweet tool.
+    Report the posted tweet IDs and URLs.
+  expected_output: >
+    A JSON object with "platform": "twitter", "success": true/false,
+    "url": "tweet URL", and optional "error" message.
+  agent: content_publisher
+
+publish_medium_task:
+  description: >
+    Take the finalized Medium article and publish it as a draft
+    using the Publish to Medium tool.
+    Report the article URL and publish status.
+  expected_output: >
+    A JSON object with "platform": "medium", "success": true/false,
+    "url": "article URL", and optional "error" message.
+  agent: content_publisher
+
+publish_discord_task:
+  description: >
+    Take the finalized Discord message and post it to the configured
+    Discord channel using the Post to Discord tool.
+    Report the post status.
+  expected_output: >
+    A JSON object with "platform": "discord", "success": true/false,
+    and optional "error" message.
+  agent: content_publisher

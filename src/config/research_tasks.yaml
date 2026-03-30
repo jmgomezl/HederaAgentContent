@@ -1,0 +1,46 @@
+youtube_research_task:
+  description: >
+    Search the official Hedera YouTube channel for recent videos about '{topic}'.
+    For the top 3 most relevant videos, fetch their transcripts.
+    Summarize the key points from each video.
+    Return the video metadata and transcript summaries.
+  expected_output: >
+    A structured list of recent Hedera YouTube videos with titles, URLs,
+    publish dates, and a 2-3 sentence summary of each video's key points
+    extracted from the transcript.
+  agent: youtube_researcher
+
+twitter_research_task:
+  description: >
+    Search X/Twitter for recent tweets from @Hedera and about #Hedera #HBAR.
+    Identify the most important announcements, trending discussions, and
+    community highlights from the past week.
+    Focus on official announcements, partnerships, product updates, and events.
+  expected_output: >
+    A summary of the top 5-10 most important tweets/topics from Hedera's
+    Twitter presence, including key quotes, engagement metrics, and
+    identified trends.
+  agent: twitter_researcher
+
+web_research_task:
+  description: >
+    Scrape the official Hedera blog at hedera.com/blog for the most recent
+    articles. Extract titles, summaries, and publication dates.
+    Identify the main themes and any breaking news or major announcements.
+  expected_output: >
+    A list of recent Hedera blog articles with titles, URLs, brief summaries,
+    and an analysis of the dominant themes and most newsworthy items.
+  agent: web_researcher
+
+content_strategy_task:
+  description: >
+    Analyze all research gathered from YouTube, Twitter, and web sources.
+    Identify the single most compelling topic for content creation right now.
+    Create a detailed content plan including topic, angle, 3-5 key points,
+    target audience, and source references.
+    The content should be factual, timely, and engaging for the Hedera community.
+  expected_output: >
+    A JSON content plan with fields: topic, angle, key_points (list),
+    target_audience, sources (list of URLs), and content_types
+    (["twitter", "medium", "discord"]).
+  agent: content_strategist
