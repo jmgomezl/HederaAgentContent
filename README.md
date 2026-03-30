@@ -291,3 +291,10 @@ Edit the prompt templates in `src/prompts/templates.py` to change tone, length, 
 | Web Scraping | BeautifulSoup4 + requests | 4.x |
 | Testing | pytest + pytest-mock | 8.x |
 | Language | Python | 3.11+ |
+
+---
+
+## Authors
+
+- **Mateo** ([@0xCastro](https://github.com/0xCastro))
+- **Juan** ([@jmgomezl](https://github.com/jmgomezl))
